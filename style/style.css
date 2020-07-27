@@ -8,6 +8,8 @@ body {
     justify-content: center;
   }
 
-  .name {
-      
+  .ul {
+    color: black;
+    width: 31%;
+    margin-left: 35%;
   }
