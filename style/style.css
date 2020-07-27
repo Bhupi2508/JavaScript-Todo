@@ -12,4 +12,11 @@ body {
     color: black;
     width: 31%;
     margin-left: 35%;
+    font: caption;
+    font-size: xx-large;
+  }
+
+  .h2 {
+    margin-left: 9%;
+    font-size: xx-large;
   }
