@@ -10,13 +10,20 @@ body {
 
   .ul {
     color: black;
-    width: 31%;
+    width: 20%;
     margin-left: 35%;
     font: caption;
     font-size: xx-large;
   }
 
   .h2 {
-    margin-left: 9%;
     font-size: xx-large;
+  }
+
+  .button {
+    cursor: pointer;  background-color: blue;
+  }
+
+  .body {
+    background-image: url('https://images.unsplash.com/photo-1586775489206-71ddbd5f9ec0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');margin-left: 47%; margin-top: 6%;
   }
