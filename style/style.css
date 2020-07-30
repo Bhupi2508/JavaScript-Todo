@@ -18,12 +18,74 @@ body {
 
   .h2 {
     font-size: xx-large;
+    margin-top: 5%;
   }
 
-  .button {
+  .button1 {
     cursor: pointer;  background-color: blue;
   }
 
   .body {
     background-image: url('https://images.unsplash.com/photo-1586775489206-71ddbd5f9ec0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');margin-left: 47%; margin-top: 6%;
   }
+
+  .btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+
+  .form {
+    margin-bottom: 2%;
+  }
+  
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }
+
+  .leftpart {
+    margin-left: 57%;
+    margin-top: 5%;
+  }
+
+  .addbtn {
+    margin-top: 30%;
+    cursor: pointer;
+    background-color: #ADFF2F;
+  }
+
+  .addbtn2 {
+    margin-top: 30%;
+    cursor: pointer;
+    background-color: #ADFF2F;
+  }
+  
+
+  .addbtn1 {
+    margin-top: 30%;
+    cursor: pointer;
+    background-color: #ADFF2F;
+  }
+  

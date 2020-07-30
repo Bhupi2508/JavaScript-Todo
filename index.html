@@ -3,23 +3,54 @@
 
 <head>
     <title>Todo Application</title>
-    <script async src="./JavaScript/app.js">
-    </script>
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="body">
-    <h1>JavaScript Todo</h1>
+    <div class="split left">
+        <div class="centered">
+            <div class=leftpart>
+                <h1>JavaScript Todo</h1>
 
-    <form>
-        Name : <input id="name" type="text" placeholder="Enter your name" required />
-    </form>
+                <form class="form">
+                    <label for="name">Name : </label>
+                    <input id="name" type="text" placeholder="Enter your name" required />
+                </form>
 
-    <h2 class="h2">List of Names</h2>
-    <ul class="ul"></ul>
+                <div>
+                    <span class="inline">
+                        <input type="text" id="add" name="text" placeholder="Enter your name" />
+                        <input class="addbtn" type="button" value="Add Name" onclick="deleteItem()" />
+                    </span>
+                    <span class="inline">
+                        <input type="text" id="edit" name="text" placeholder="Enter your name" />
+                        <input class="addbtn1" type="button" value="Edit Name" onclick="deleteItem()" />
+                    </span>
+                    <span class="inline">
+                        <input type="text" id="del" name="text" placeholder="Enter your name" />
+                        <input class="addbtn2" type="button" value="Delete Name" onclick="deleteItem()" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <button class=button>Clear All</button>
+
+    <div class="split right">
+        <div class="centered">
+            <h2 class="h2"><label>List of Names</label></h2>
+            <ol class="ul" id="a">
+            </ol>
+
+            <button class=button1><label>Clear All</label></button>
+        </div>
+    </div>
 
 
 </body>
+
+<script async src="./JavaScript/app.js">
+</script>
+
 </html>
