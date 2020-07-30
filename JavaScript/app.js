@@ -55,7 +55,6 @@ function name(e) {
  * It will print value one by one after add
  */
 data.forEach(name => {
-    console.log("name", name);
     liMaker(name);
     // DeleteName(name);
 });
@@ -77,31 +76,43 @@ button.addEventListener('click', function (e) {
  * Function which will handle elements after remove
  */
 function deleteItem() {
+    try {
 
-    var removeVal = document.getElementById("del").value
+        var removeVal = document.getElementById("del").value
 
-    for (let i = 0; i < itemsArray.length; i++) {
-        if (itemsArray[i] === removeVal) {
-            var find = itemsArray.indexOf(itemsArray[i])
-            itemsArray.splice(find, 1)
-            localStorage.setItem('items', JSON.stringify(itemsArray));
-            const data1 = JSON.parse(localStorage.getItem('items'));
+        for (let i = 0; i < itemsArray.length; i++) {
+            if (itemsArray[i] === removeVal) {
+                var find = itemsArray.indexOf(itemsArray[i])
+                itemsArray.splice(find, 1)
+                localStorage.setItem('items', JSON.stringify(itemsArray));
+                const data1 = JSON.parse(localStorage.getItem('items'));
 
-            /**
-             * Remove each and every element
-             */
-            while (ol.firstChild) {
-                ol.removeChild(ol.firstChild);
+                /**
+                 * Remove each and every element
+                 */
+                while (ol.firstChild) {
+                    ol.removeChild(ol.firstChild);
+                }
+
+                /**
+                 * Print each and every element
+                 */
+                data1.forEach(name => {
+                    liMaker(name);
+                });
             }
-
-            /**
-             * Print each and every element
-             */
-            data1.forEach(name => {
-                console.log("name", name);
-                liMaker(name);
-            });
         }
+    } catch (err) {
+        return err;
     }
 
+}
+
+/**
+ * Add item
+ */
+function addItem() {
+    console.log("In method");
+    var a = document.getElementById("add").addEventListener('submit', name)
+    console.log("2", a);
 }
