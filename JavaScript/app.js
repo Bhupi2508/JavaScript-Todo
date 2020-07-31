@@ -27,7 +27,9 @@ const data = JSON.parse(localStorage.getItem('items'));
  * Print all the values after add
  */
 const liMaker = (text) => {
+    console.log("text", text);
     const li = document.createElement('li');
+    console.log("li", li);
     li.textContent = text;
     ol.appendChild(li);
 }
@@ -44,6 +46,17 @@ form.addEventListener('submit', name)
  */
 function name(e) {
     e.preventDefault();
+    console.log("dfghj");
+    itemsArray.push(input.value);
+    console.log("inputVal", input.value);
+    localStorage.setItem('items', JSON.stringify(itemsArray));
+    liMaker(input.value);
+    input.value = "";
+
+};
+
+function name1(input) {
+    console.log("dfghj");
     itemsArray.push(input.value);
     localStorage.setItem('items', JSON.stringify(itemsArray));
     liMaker(input.value);
@@ -55,6 +68,7 @@ function name(e) {
  * It will print value one by one after add
  */
 data.forEach(name => {
+    console.log("name", name);
     liMaker(name);
     // DeleteName(name);
 });
@@ -109,10 +123,15 @@ function deleteItem() {
 }
 
 /**
+ * function store in a variable
+ */
+var tempfunc = name1;
+
+/**
  * Add item
  */
 function addItem() {
     console.log("In method");
-    var a = document.getElementById("add").addEventListener('submit', name)
-    console.log("2", a);
+    document.getElementById("add").addEventListener('submit', tempfunc())
+
 }
