@@ -46,17 +46,6 @@ form.addEventListener('submit', name)
  */
 function name(e) {
     e.preventDefault();
-    console.log("dfghj");
-    itemsArray.push(input.value);
-    console.log("inputVal", input.value);
-    localStorage.setItem('items', JSON.stringify(itemsArray));
-    liMaker(input.value);
-    input.value = "";
-
-};
-
-function name1(input) {
-    console.log("dfghj");
     itemsArray.push(input.value);
     localStorage.setItem('items', JSON.stringify(itemsArray));
     liMaker(input.value);
@@ -65,10 +54,21 @@ function name1(input) {
 };
 
 /**
+ * 
+ * @param {*} input pass input value
+ * For add functionality without addeventListener 
+ */
+function name1(input) {
+    itemsArray.push(input);
+    localStorage.setItem('items', JSON.stringify(itemsArray));
+    liMaker(input);
+    input = "";
+};
+
+/**
  * It will print value one by one after add
  */
 data.forEach(name => {
-    console.log("name", name);
     liMaker(name);
     // DeleteName(name);
 });
@@ -131,7 +131,7 @@ var tempfunc = name1;
  * Add item
  */
 function addItem() {
-    console.log("In method");
-    document.getElementById("add").addEventListener('submit', tempfunc())
+    var aVal = document.getElementById("add").value
+    tempfunc(aVal)
 
 }
