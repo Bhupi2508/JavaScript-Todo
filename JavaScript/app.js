@@ -49,7 +49,7 @@ function name(e) {
     itemsArray.push(input.value);
     localStorage.setItem('items', JSON.stringify(itemsArray));
     liMaker(input.value);
-    input.value = "";
+    // input.value = "";
 
 };
 
@@ -58,11 +58,10 @@ function name(e) {
  * @param {*} input pass input value
  * For add functionality without addeventListener 
  */
-function name1(input) {
+function addName(input) {
     itemsArray.push(input);
     localStorage.setItem('items', JSON.stringify(itemsArray));
     liMaker(input);
-    input = "";
 };
 
 /**
@@ -125,7 +124,7 @@ function deleteItem() {
 /**
  * function store in a variable
  */
-var tempfunc = name1;
+var tempfunc = addName;
 
 /**
  * Add item
@@ -133,5 +132,6 @@ var tempfunc = name1;
 function addItem() {
     var aVal = document.getElementById("add").value
     tempfunc(aVal)
-
+    document.getElementById("add").value = "";
 }
+
