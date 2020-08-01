@@ -135,3 +135,16 @@ function addItem() {
     document.getElementById("add").value = "";
 }
 
+/**
+ * edit item
+ */
+function editItem() {
+    var aVal = document.getElementById("add").value
+    tempfunc(aVal)
+    document.getElementById("add").value = "";
+}
+
+
+function abrete() {
+    $("#dialog").dialog();
+}

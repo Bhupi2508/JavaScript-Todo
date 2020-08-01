@@ -77,7 +77,7 @@ body {
   }
 
   .addbtn2 {
-    margin-top: 30%;
+    margin-top: 15%;
     cursor: pointer;
     background-color: #ADFF2F;
   }
@@ -89,3 +89,6 @@ body {
     background-color: #ADFF2F;
   }
   
+  .create {
+    margin-top: 15%;
+  }

@@ -5,6 +5,10 @@
     <title>Todo Application</title>
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dialogo</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body class="body">
@@ -24,17 +28,31 @@
                         <input class="addbtn" type="button" value="Add Name" onclick="addItem()" />
                     </span>
                     <span class="inline">
-                        <input type="text" id="edit" name="text" placeholder="Enter your name" />
-                        <input class="addbtn1" type="button" value="Edit Name" onclick="editItem()" />
+                        <!-- <input type="text" id="edit" name="text" placeholder="Enter your name" />
+                        <input class="addbtn1" type="button" value="Edit Name" onclick="editItem()" /> -->
+                   
                     </span>
                     <span class="inline">
                         <input type="text" id="del" name="text" placeholder="Enter your name" />
                         <input class="addbtn2" type="button" value="Delete Name" onclick="deleteItem()" />
                     </span>
                 </div>
+                <div id="dialog" title="Create new user" style="display:none;">
+                    <p class="validateTips">All form fields are required.</p>
+                    <form action='tuscript.php'>
+                        <fieldset>
+                            <label for="oldname">Old Name</label>
+                            <input type="text" name="oldname" id="oldname" class="text">
+                            <label for="newname">new Name</label>
+                            <input type="text" name="newname" id="newname" value="" class="text">
+                        </fieldset>
+                    </form>
+                </div>
+                <button class="create" onclick='abrete()'>Create new user</button>
             </div>
         </div>
     </div>
+
 
 
     <div class="split right">
@@ -51,5 +69,7 @@
 
 <script async src="./JavaScript/app.js">
 </script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </html>
