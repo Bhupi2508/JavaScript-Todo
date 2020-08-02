@@ -28,27 +28,12 @@
                         <input class="addbtn" type="button" value="Add Name" onclick="addItem()" />
                     </span>
                     <span class="inline">
-                        <!-- <input type="text" id="edit" name="text" placeholder="Enter your name" />
-                        <input class="addbtn1" type="button" value="Edit Name" onclick="editItem()" /> -->
-                   
-                    </span>
-                    <span class="inline">
                         <input type="text" id="del" name="text" placeholder="Enter your name" />
                         <input class="addbtn2" type="button" value="Delete Name" onclick="deleteItem()" />
                     </span>
                 </div>
-                <div id="dialog" title="Create new user" style="display:none;">
-                    <p class="validateTips">All form fields are required.</p>
-                    <form action='tuscript.php'>
-                        <fieldset>
-                            <label for="oldname">Old Name</label>
-                            <input type="text" name="oldname" id="oldname" class="text">
-                            <label for="newname">new Name</label>
-                            <input type="text" name="newname" id="newname" value="" class="text">
-                        </fieldset>
-                    </form>
-                </div>
-               
+                <input class="editbtn" type="button" onclick="disp_prompt()" value="Edit Name">
+
             </div>
         </div>
     </div>

@@ -81,14 +81,9 @@ body {
     cursor: pointer;
     background-color: #ADFF2F;
   }
-  
 
-  .addbtn1 {
-    margin-top: 30%;
+  .editbtn {
+    margin-top: 21%;
     cursor: pointer;
     background-color: #ADFF2F;
-  }
-  
-  .create {
-    margin-top: 15%;
   }

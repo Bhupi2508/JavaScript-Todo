@@ -27,9 +27,7 @@ const data = JSON.parse(localStorage.getItem('items'));
  * Print all the values after add
  */
 const liMaker = (text) => {
-    console.log("text", text);
     const li = document.createElement('li');
-    console.log("li", li);
     li.textContent = text;
     ol.appendChild(li);
 }
@@ -139,13 +137,39 @@ function addItem() {
 /**
  * edit item
  */
-function editItem() {
-    var aVal = document.getElementById("add").value
-    tempfunc(aVal)
-    document.getElementById("add").value = "";
-}
+function disp_prompt() {
+    var oldVal = prompt("Enter old name", "")
+    var newVal = prompt("Enter new name", "")
+    if (oldVal != null && oldVal != "") {
+        if (newVal != null && newVal != "") {
+            for (var i = 0; i < itemsArray.length; i++) {
+                if (itemsArray[i] === oldVal) {
+                    var find = itemsArray.indexOf(itemsArray[i])
+                    var q = itemsArray.splice(find, 1, newVal);
+                    localStorage.setItem('items', JSON.stringify(itemsArray));
+                    const data1 = JSON.parse(localStorage.getItem('items'));
 
+                    /**
+                     * Remove each and every element
+                     */
+                    while (ol.firstChild) {
+                        ol.removeChild(ol.firstChild);
+                    }
 
-function abrete() {
-    $("#dialog").dialog();
+                    /**
+                     * Print each and every element
+                     */
+                    data1.forEach(name => {
+                        liMaker(name);
+                    });
+                }
+            }
+        }
+        else {
+            alert("Please Enter new value")
+        }
+
+    } else {
+        alert("Please Enter old value")
+    }
 }
