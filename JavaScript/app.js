@@ -49,7 +49,7 @@ function name(e) {
     itemsArray.push(input.value);
     localStorage.setItem('items', JSON.stringify(itemsArray));
     liMaker(input.value);
-    // input.value = "";
+    input.value = "";
 
 };
 
@@ -118,6 +118,7 @@ function deleteItem() {
     } catch (err) {
         return err;
     }
+    document.getElementById("del").value = "";
 
 }
 
